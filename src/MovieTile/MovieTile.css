@@ -1,7 +1,8 @@
 .movie-tile {
-    height: 20vh;
+    height: 30vh;
     aspect-ratio: auto 557 / 836;
     background-size: cover;
     background-color: blue;
+    margin: 2vh;
 }
 
