@@ -5,11 +5,13 @@ import MovieTile from '../MovieTile/MovieTile';
 function Home() {
     return (
         <div className="home-page">
-            {movieData.movies.map((movie, index) =>{
-                return (
-                <MovieTile movie={movie} key={index} />
-                )
-            })}
+            <div className="movie-container">
+                {movieData.movies.map((movie, index) =>{
+                    return (
+                    <MovieTile movie={movie} key={index} />
+                    )
+                })}
+            </div>
         </div>
     )
   }

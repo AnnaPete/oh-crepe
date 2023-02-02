@@ -2,8 +2,16 @@ import './MovieTile.css'
 
 function MovieTile( movie, key) {
     const currentMovie = movie.movie
+    console.log(currentMovie)
     return (
-        <h1>{currentMovie.title}</h1>
+        <div 
+            className="movie-tile"
+            style={{
+                backgroundImage: `url(${currentMovie["poster_path"]})`
+            }}
+        >
+
+        </div>
     )
   }
   
