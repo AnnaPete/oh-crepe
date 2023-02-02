@@ -6,7 +6,9 @@ function Home() {
     return (
         <div className="home-page">
             {movieData.movies.map((movie, index) =>{
+                return (
                 <MovieTile movie={movie} key={index} />
+                )
             })}
         </div>
     )

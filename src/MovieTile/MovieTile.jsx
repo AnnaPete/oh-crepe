@@ -1,8 +1,9 @@
 import './MovieTile.css'
 
-function MovieTile() {
+function MovieTile( movie, key) {
+    const currentMovie = movie.movie
     return (
-        <h1>hello</h1>
+        <h1>{currentMovie.title}</h1>
     )
   }
   
