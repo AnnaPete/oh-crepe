@@ -1,0 +1,14 @@
+
+.header {
+    background-color: black;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header > h1 {
+    color: white;
+    margin: 5%;
+}
