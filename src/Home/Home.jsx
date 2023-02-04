@@ -2,13 +2,13 @@ import './Home.css'
 import movieData from '../Utilities/movieData';
 import MovieTile from '../MovieTile/MovieTile';
 
-function Home() {
+function Home(props) {
     return (
         <div className="home-page">
             <div className="movie-container">
                 {movieData.movies.map((movie, index) =>{
                     return (
-                    <MovieTile movie={movie} key={index} />
+                    <MovieTile showMovie={props.showMovie} movie={movie} key={index} />
                     )
                 })}
             </div>
