@@ -10,7 +10,8 @@ class App extends Component {
     super()
     this.state = {
       currentMovie: null,
-      movieList: []
+      movieList: [],
+      error: ''
     }
   }
 
@@ -26,7 +27,9 @@ class App extends Component {
     getMovies()
     .then(data => {
       this.setState({movieList: [...data]})
-      console.log(this.state.movieList)
+    })
+    .catch(error => {
+      this.setState({error: error.toString()})
     })
   }
 
@@ -34,9 +37,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header returnHome={this.returnHome}/>
+        {this.state.error && <p className="error-message">{this.state.error}</p>}
         {!this.state.currentMovie 
         ? <Home movieList={this.state.movieList} showMovie={this.showMovie}/> 
-        : <MoviePage currentMovie={this.state.currentMovie} />} 
+        : <MoviePage currentMovie={this.state.currentMovie} />
+        } 
       </div>
     )
   }

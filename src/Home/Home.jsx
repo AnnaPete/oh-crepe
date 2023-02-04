@@ -6,9 +6,11 @@ function Home(props) {
     return (
         <div className="home-page">
             <div className="movie-container">
-                {props.movieList.map((movie, index) =>{
+                {!props.movieList 
+                ? <p>Something went Wrong!</p>
+                : props.movieList.map((movie, index) =>{
                     return (
-                    <MovieTile showMovie={props.showMovie} movie={movie} key={index} />
+                        <MovieTile showMovie={props.showMovie} movie={movie} key={index} />
                     )
                 })}
             </div>

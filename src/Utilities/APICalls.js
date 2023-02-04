@@ -1,11 +1,11 @@
 export const getMovies = () => {
     return (
-        fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
+        fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movie')
         .then(response => {
             if(response.ok) {
                 return response.json()
             } else {
-                throw new Error('something went wrong')
+                throw new Error('Something went wrong, try again later.')
             }
         })
         .then(data => {
@@ -21,7 +21,7 @@ export const getSingleMovie = (movieID) => {
             if(response.ok) {
                 return response.json()
             } else {
-                throw new Error('something went wrong')
+                throw new Error('Something went wrong, try again later.')
             }
         })
         .then(data => {
