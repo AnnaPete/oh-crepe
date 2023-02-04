@@ -4,11 +4,13 @@ import './MovieTile.css'
 function MovieTile( props ) {
 	const currentMovie = props.movie
 	const displayDetails = () => {
-
         getSingleMovie(currentMovie.id)
         .then(data => {
             props.showMovie(data)
         })
+        .catch(error => {
+            props.setError(error)
+          })
 	}
 
 	return (

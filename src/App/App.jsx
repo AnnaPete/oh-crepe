@@ -19,6 +19,10 @@ class App extends Component {
     this.setState({currentMovie: movie})
   }
 
+  setError = (error) => {
+    this.setState({error: error.toString()})
+  }
+
   returnHome = () => {
     this.setState({currentMovie: null})
   } 
@@ -39,7 +43,7 @@ class App extends Component {
         <Header returnHome={this.returnHome}/>
         {this.state.error && <p className="error-message">{this.state.error}</p>}
         {!this.state.currentMovie 
-        ? <Home movieList={this.state.movieList} showMovie={this.showMovie}/> 
+        ? <Home movieList={this.state.movieList} setError={this.setError} showMovie={this.showMovie}/> 
         : <MoviePage currentMovie={this.state.currentMovie} />
         } 
       </div>

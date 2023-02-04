@@ -10,7 +10,7 @@ function Home(props) {
                 ? <p>Something went Wrong!</p>
                 : props.movieList.map((movie, index) =>{
                     return (
-                        <MovieTile showMovie={props.showMovie} movie={movie} key={index} />
+                        <MovieTile setError={props.setError} showMovie={props.showMovie} movie={movie} key={index} />
                     )
                 })}
             </div>

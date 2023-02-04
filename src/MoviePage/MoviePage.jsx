@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './MoviePage.css'
 
 function MoviePage(props)  {
-  console.log(props)
   return (
     <div className='movie-page'>
       <div className='title'>
