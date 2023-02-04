@@ -33,7 +33,7 @@ class App extends Component {
       this.setState({movieList: [...data]})
     })
     .catch(error => {
-      this.setState({error: error.toString()})
+      this.setError(error)
     })
   }
 
