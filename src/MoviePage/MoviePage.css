@@ -1,0 +1,9 @@
+.movie-page {
+  max-height: 85vh;
+  display: flex;
+
+}
+
+img {
+  height: 50vh
+}
