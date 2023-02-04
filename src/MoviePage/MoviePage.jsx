@@ -10,14 +10,16 @@ function MoviePage(props)  {
         <img src={props.currentMovie.poster_path}/>
       </div>
       <div className='details'>
-        <p>{props.currentMovie.tagline}</p>
+        <h2>{props.currentMovie.tagline}</h2>
+        <p>{props.currentMovie.overview}</p>
         <p>Release Date: {props.currentMovie.release_date}</p>
         <p>Average Rating: {props.currentMovie.average_rating}</p>
         <p>Runtime: {props.currentMovie.runtime}</p>
-        <p>Overview: {props.currentMovie.overview}</p>
-        <p>Genres: {props.currentMovie.genres}</p>
-        <p>Budget: {props.currentMovie.budget}</p>
-        <p>Revenue: {props.currentMovie.revenue}</p>
+
+        <p>Genres: {props.currentMovie.genres.join(', ')
+        }</p>
+        <p>Budget: ${props.currentMovie.budget}</p>
+        <p>Revenue: ${props.currentMovie.revenue}</p>
       </div>
     </div>
   )
