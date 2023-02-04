@@ -1,9 +1,14 @@
+import { getSingleMovie } from '../Utilities/APICalls'
 import './MovieTile.css'
 
 function MovieTile( props ) {
 	const currentMovie = props.movie
 	const displayDetails = () => {
-		props.showMovie(currentMovie)
+
+        getSingleMovie(currentMovie.id)
+        .then(data => {
+            props.showMovie(data)
+        })
 	}
 
 	return (
