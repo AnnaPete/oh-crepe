@@ -1,10 +1,12 @@
 import './Header.css'
+import {Link} from 'react-router-dom'
 
 function Header(props) {
     return (
         <div className="header">
-            <h1 className='oh-crepe' onClick={props.returnHome} >Oh Crepe</h1>
-            <h1>Search bar goes here</h1>
+            <Link to={'/'} style={{ textDecoration: 'none' }}>
+                <h1 className='oh-crepe'>Oh Crepe</h1>
+            </Link>
         </div>
     )
   }

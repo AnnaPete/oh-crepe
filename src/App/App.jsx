@@ -11,7 +11,6 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      currentMovie: null,
       movieList: [],
       error: ''
     }
@@ -32,10 +31,6 @@ class App extends Component {
     this.setState({error: error.toString()})
   }
 
-  returnHome = () => {
-    this.setState({currentMovie: null})
-  } 
-
   componentDidMount = () => {
     getMovies()
     .then(data => {
@@ -50,7 +45,7 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <Header returnHom={this.returnHome}/>
+        <Header />
         <Route exact path="/" render={ () => <Home movieList={this.state.movieList} setError={this.setError} showMovie={this.showMovie}/>}/>
         <Route exact path="/movie/:id" 
           render={ ({match}) => {
