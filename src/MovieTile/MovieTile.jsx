@@ -1,5 +1,6 @@
 import { getSingleMovie } from '../Utilities/APICalls'
 import './MovieTile.css'
+import {Link} from 'react-router-dom'
 
 function MovieTile( props ) {
 	const currentMovie = props.movie
@@ -14,14 +15,17 @@ function MovieTile( props ) {
 	}
 
 	return (
-		<div 
-			className="movie-tile"
-			style={{
-				backgroundImage: `url(${currentMovie["poster_path"]})`
-			}}
-			onClick={displayDetails}
-		>
-		</div>
+		<Link to={{
+			pathname: `/movie/${currentMovie.id}`}}>
+			<div 
+				className="movie-tile"
+				style={{
+					backgroundImage: `url(${currentMovie["poster_path"]})`
+				}}
+
+			>
+			</div>
+		</Link>
 	)
 }  
   
