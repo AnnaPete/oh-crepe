@@ -27,5 +27,8 @@ export const getSingleMovie = (movieID) => {
         .then(data => {
             return data.movie
         })
+        .catch(error => {
+            console.log(error)
+        })
     )
 }
