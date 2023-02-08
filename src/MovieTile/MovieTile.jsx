@@ -15,7 +15,7 @@ function MovieTile( props ) {
 	}
 
 	return (
-		<Link to={{
+		<Link id={currentMovie.id} to={{
 			pathname: `/movie/${currentMovie.id}`}}>
 			<div 
 				className="movie-tile"
