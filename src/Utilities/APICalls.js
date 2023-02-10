@@ -5,7 +5,7 @@ export const getMovies = () => {
             if(response.ok) {
                 return response.json()
             } else {
-                throw new Error('Something went wrong, try again later.')
+                return Promise.reject(response.status)
             }
         })
         .then(data => {
@@ -21,14 +21,11 @@ export const getSingleMovie = (movieID) => {
             if(response.ok) {
                 return response.json()
             } else {
-                throw new Error('Something went wrong, try again later.')
+                return Promise.reject(response.status)
             }
         })
         .then(data => {
             return data.movie
-        })
-        .catch(error => {
-            console.log(error)
         })
     )
 }

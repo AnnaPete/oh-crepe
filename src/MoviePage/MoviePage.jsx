@@ -10,7 +10,6 @@ import { getSingleMovie } from '../Utilities/APICalls'
 
 class MoviePage extends Component {
   constructor(props) {
-    console.log(props)
     super()
     this.state = {
         currentMovie: props.currentMovie,
@@ -26,6 +25,7 @@ class MoviePage extends Component {
       this.setState({loading: false})
     })
     .catch(error => {
+      console.log(error)
       this.state.setError(error)
       this.setState({loading: false})
     })
