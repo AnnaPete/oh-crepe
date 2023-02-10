@@ -10,7 +10,6 @@ import { getSingleMovie } from '../Utilities/APICalls'
 
 class MoviePage extends Component {
   constructor(props) {
-    console.log(props)
     super()
     this.state = {
         currentMovie: props.currentMovie,

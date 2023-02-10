@@ -28,7 +28,14 @@ class App extends Component {
   }
 
   setError = (error) => {
-    this.setState({error: error.toString()})
+    if(error === 404) {
+      this.setState({error: `Error ${error},  movie not found.`})
+    } else if(error === 500) {
+      this.setState({error: `Error ${error},  please try again.`})
+    } else {
+      this.setState({error: `Something went wrong, please try again.`})
+    }
+
   }
 
   componentDidMount = () => {
@@ -56,9 +63,8 @@ class App extends Component {
               else if(!movieExists) {
                 return <h1>This movie does not exist</h1>
               }
-
-              }
-            }/>
+            }
+          }/>
         {this.state.error && <p className="error-message">{this.state.error}</p>}
       </main>
     )

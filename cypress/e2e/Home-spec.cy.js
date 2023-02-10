@@ -1,10 +1,14 @@
 describe('Homepage testing', () => {
   beforeEach(() => {
+
     cy.visit('http://localhost:3000/')
+    cy.intercept("GET", "https://rancid-tomatillos.herokuapp.com/api/v2/movies", {fixture: "movies.json"})
+    
   })
 
-  it('should have a header', () => {
+  it('should have a header with the title', () => {
     cy.get('.header')
+      .contains('Oh Crepe')
   })
 
   it('should display a collection of all movies', () => {
