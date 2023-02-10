@@ -1,0 +1,21 @@
+{
+    "movie": {
+        "id": 829280,
+        "title": "Enola Holmes 2",
+        "poster_path": "https://image.tmdb.org/t/p/original//tegBpjM5ODoYoM1NjaiHVLEA0QM.jpg",
+        "backdrop_path": "https://image.tmdb.org/t/p/original//rjlG7C5GZfXutoVoE3BJaYGUhk4.jpg",
+        "release_date": "2022-11-04",
+        "overview": "Now a detective-for-hire like her infamous brother, Enola Holmes takes on her first official case to find a missing girl, as the sparks of a dangerous conspiracy ignite a mystery that requires the help of friends — and Sherlock himself — to unravel.",
+        "genres": [
+            "Mystery",
+            "Adventure",
+            "Comedy",
+            "Crime"
+        ],
+        "budget": 189,
+        "revenue": 0,
+        "runtime": 129,
+        "tagline": "The sequel is afoot!",
+        "average_rating": 9
+    }
+}

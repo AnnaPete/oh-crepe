@@ -1,6 +1,7 @@
 describe('Movie Page testing', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/movie/829280')
+    cy.intercept("GET", "https://rancid-tomatillos.herokuapp.com/api/v2/movies/829280", {fixture: "movie.json"})
   })
 
   it('should have a header', () => {
