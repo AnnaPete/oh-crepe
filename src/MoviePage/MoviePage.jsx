@@ -25,7 +25,6 @@ class MoviePage extends Component {
       this.setState({loading: false})
     })
     .catch(error => {
-      console.log(error)
       this.state.setError(error)
       this.setState({loading: false})
     })
