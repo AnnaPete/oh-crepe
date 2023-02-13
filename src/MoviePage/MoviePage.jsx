@@ -2,11 +2,6 @@ import React, { Component } from 'react'
 import './MoviePage.css'
 import { getSingleMovie } from '../Utilities/APICalls'
 
-// function MoviePage(props)  {
-
-
-
-
 
 class MoviePage extends Component {
   constructor(props) {
@@ -35,31 +30,27 @@ class MoviePage extends Component {
           {(this.state.loading) && <h1>Loading...</h1>}
           {(this.state.movieDetails) &&
            (
-            <div className='movie-page'>
-            <div className='title'>
-              <h1>{this.state.movieDetails.title}</h1>
-              <img src={this.state.movieDetails.poster_path}/>
+            <div className='overview' style={{backgroundImage: `url(${this.state.movieDetails['backdrop_path']})`}}>
+              
+              <div className='movie-details'>
+                <img className='movie-poster' src={this.state.movieDetails.poster_path}/>
+                <div className='details'>
+                  <h1>{this.state.movieDetails.title}</h1>
+                  <h2>{this.state.movieDetails.tagline}</h2>
+                  <p>{this.state.movieDetails.overview}</p>
+                  <p>Release Date: {this.state.movieDetails.release_date}</p>
+                  <p>Average Rating: {this.state.movieDetails.average_rating}</p>
+                  <p>Runtime: {this.state.movieDetails.runtime}</p>
+                  <p>Genres: {this.state.movieDetails.genres.join(', ')
+                  }</p>
+                  <p>Budget: ${this.state.movieDetails.budget}</p>
+                  <p>Revenue: ${this.state.movieDetails.revenue}</p>
+                </div>
+              </div>
             </div>
-            <div className='details'>
-              <h2>{this.state.movieDetails.tagline}</h2>
-              <p>{this.state.movieDetails.overview}</p>
-              <p>Release Date: {this.state.movieDetails.release_date}</p>
-              <p>Average Rating: {this.state.movieDetails.average_rating}</p>
-              <p>Runtime: {this.state.movieDetails.runtime}</p>
-      
-              <p>Genres: {this.state.movieDetails.genres.join(', ')
-              }</p>
-              <p>Budget: ${this.state.movieDetails.budget}</p>
-              <p>Revenue: ${this.state.movieDetails.revenue}</p>
-            </div>
-          </div>
           )
           }
-
         </div>
-        
-
-      
       )
     }
 }
