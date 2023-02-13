@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/oh-crepe/static/css/main.76f1ee64.css",
+    "main.js": "/oh-crepe/static/js/main.660ebe15.js",
+    "static/js/787.853cbca0.chunk.js": "/oh-crepe/static/js/787.853cbca0.chunk.js",
+    "static/media/clapper.png": "/oh-crepe/static/media/clapper.a13e1de466d0d57a60c4.png",
+    "index.html": "/oh-crepe/index.html",
+    "main.76f1ee64.css.map": "/oh-crepe/static/css/main.76f1ee64.css.map",
+    "main.660ebe15.js.map": "/oh-crepe/static/js/main.660ebe15.js.map",
+    "787.853cbca0.chunk.js.map": "/oh-crepe/static/js/787.853cbca0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76f1ee64.css",
+    "static/js/main.660ebe15.js"
+  ]
+}
