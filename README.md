@@ -25,6 +25,10 @@ As a team of two, we created a movie review site utilizing an API that presented
 - [Zac Walters](https://github.com/zacwalters4)
 
 ## Preview
+![Oh-Crepe-Preview](https://user-images.githubusercontent.com/22826695/218611823-21a80e6b-aa7a-4ea6-a5ab-21e49d6085d9.gif)
+
+## Concept
+![image](https://user-images.githubusercontent.com/22826695/218611908-571afae9-276d-4fea-91a2-54217e33f0fd.png)
 
 ## Tech Used
 - React
