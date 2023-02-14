@@ -21,14 +21,12 @@ As a team of two, we created a movie review site utilizing an API that presented
 - Create a multi-page UX using Router
 
 ## Contributors
-
 - [Anna Pete](https://github.com/AnnaPete)
 - [Zac Walters](https://github.com/zacwalters4)
 
 ## Preview
 
 ## Tech Used
-
 - React
 - React Router
 - HTML6
