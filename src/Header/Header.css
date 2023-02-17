@@ -28,7 +28,7 @@
     margin-right: 5%;
 }
 
-.please {
+.header-link {
     display: flex;
     flex-direction: row;
     justify-content: center;

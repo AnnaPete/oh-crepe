@@ -8,7 +8,8 @@ describe('Homepage testing', () => {
 
   it('should have a header with the title', () => {
     cy.get('.header')
-      .contains('Oh Crepe')
+    .get('.header-link')
+      .contains('Oh, Crepe!')
   })
 
   it('should display a collection of all movies', () => {

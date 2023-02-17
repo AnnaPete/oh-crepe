@@ -9,9 +9,9 @@ describe('Movie Page testing', () => {
   })
 
   it('should display the movie title and poster', () => {
-    cy.get('.title')
+    cy.get('.details')
     .contains('Enola Holmes 2')
-    cy.get('img')
+    cy.get('.movie-poster')
     .should('have.attr', 'src', 'https://image.tmdb.org/t/p/original//tegBpjM5ODoYoM1NjaiHVLEA0QM.jpg')
   })
 

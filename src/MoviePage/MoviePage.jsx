@@ -33,7 +33,7 @@ class MoviePage extends Component {
             <div className='overview' style={{backgroundImage: `url(${this.state.movieDetails['backdrop_path']})`}}>
               
               <div className='movie-details'>
-                <img className='movie-poster' src={this.state.movieDetails.poster_path}/>
+                <img alt={`Poster of ${this.state.movieDetails.title}`} className='movie-poster' src={this.state.movieDetails.poster_path}/>
                 <div className='details'>
                   <h1>{this.state.movieDetails.title}</h1>
                   <h2>{this.state.movieDetails.tagline}</h2>
