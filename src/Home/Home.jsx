@@ -1,5 +1,5 @@
 import './Home.css'
-
+import PropTypes from 'prop-types'
 import MovieTile from '../MovieTile/MovieTile';
 
 function Home(props) {
@@ -19,3 +19,11 @@ function Home(props) {
   }
   
   export default Home;
+
+  Home.propTypes = {
+    props: PropTypes.shape({
+        movieList: PropTypes.arrayOf(PropTypes.object).isRequired,
+        setError: PropTypes.func.isRequired,
+        showMovie: PropTypes.func.isRequired
+    })
+  };

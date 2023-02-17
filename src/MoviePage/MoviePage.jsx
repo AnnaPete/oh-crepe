@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './MoviePage.css'
 import { getSingleMovie } from '../Utilities/APICalls'
 
@@ -57,3 +58,10 @@ class MoviePage extends Component {
 
 
 export default MoviePage;
+
+MoviePage.propTypes = {
+  props: PropTypes.shape({
+    currentMovie: PropTypes.number.isRequired,
+  setError: PropTypes.func.isRequired
+  })
+}

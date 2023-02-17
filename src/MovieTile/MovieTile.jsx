@@ -1,4 +1,5 @@
 import './MovieTile.css'
+import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 
 function MovieTile( props ) {
@@ -18,4 +19,19 @@ function MovieTile( props ) {
 	)
 }  
   
-  export default MovieTile;
+export default MovieTile;
+
+MovieTile.propTypes = {
+	props: PropTypes.shape({
+		movie: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      poster_path: PropTypes.string.isRequired,
+      backdrop_path: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      average_rating: PropTypes.number.isRequired,
+      release_date: PropTypes.string.isRequired,
+    }).isRequired,
+  setError: PropTypes.func.isRequired,
+	showMovie: PropTypes.func.isRequired
+	})
+}

@@ -1,5 +1,6 @@
 import './App.css'
 import React, { Component } from 'react'
+import propTypes from 'prop-types'
 import Home from '../Home/Home'
 import Header from '../Header/Header'
 import MoviePage from '../MoviePage/MoviePage'
@@ -66,9 +67,9 @@ class App extends Component {
                 }
               }
             }/>
-          {this.state.error && <p className="error-message">{this.state.error}</p>}
           <Redirect to='/' />
         </Switch>
+        {this.state.error && <p className="error-message">{this.state.error}</p>}
       </main>
     )
   }
